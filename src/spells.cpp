@@ -283,6 +283,8 @@ bool CombatSpell::castSpell(Creature* creature)
 
 bool CombatSpell::castSpell(Creature* creature, Creature* target)
 {
+	if (!creature || !target)
+		return false;
 	if (scripted) {
 		LuaVariant var;
 
